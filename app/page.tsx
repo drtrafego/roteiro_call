@@ -194,9 +194,9 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
           <Script txt="[Nome], que bom falar com você. Antes de mostrar qualquer coisa, quero entender o seu negócio primeiro. Posso te fazer algumas perguntas?" />
         </Card>
         <Card label="Se ele perguntar o preço logo de cara">
-          <Script txt="Com certeza te falo, mas o valor depende do que faz sentido pra você — cada negócio é diferente. Me deixa entender o seu caso primeiro. Combinado?" />
+          <Script txt="Com certeza te falo, mas o valor depende do que faz sentido pra você: cada negócio é diferente. Me deixa entender o seu caso primeiro. Combinado?" />
         </Card>
-        <Tip txt="PNL — Espelhamento: ajuste seu ritmo ao ritmo do lead nos primeiros 2 minutos." tipo="a" />
+        <Tip txt="PNL: Espelhamento: ajuste seu ritmo ao ritmo do lead nos primeiros 2 minutos." tipo="a" />
         <Tip txt="Use o nome da pessoa ao menos 2x nos primeiros 3 minutos — ativa atenção seletiva." />
       </div>
 
@@ -209,7 +209,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
         <Tip txt="NUNCA interrompa. Quanto mais ele fala, mais munição você tem." tipo="r" />
         <Card label="Perguntas de situação">
           <Q num={1} txt="Hoje, de onde vêm a maioria dos seus clientes?" hint="Canal principal atual" id="r1" onChange={autoSave} />
-          <Q num={2} txt="Você tem previsibilidade de quantos clientes novos chegam por mês?" hint="sim/não — se sim, o número" id="r2" onChange={autoSave} />
+          <Q num={2} txt="Você tem previsibilidade de quantos clientes novos chegam por mês?" hint="Sim/Não: se sim, o número" id="r2" onChange={autoSave} />
           <Q num={3} txt="Quando um lead entra em contato, quem responde e em quanto tempo?" hint="Tempo de resposta + responsável" id="r3" onChange={autoSave} />
         </Card>
         <Card label="Perguntas de problema">
@@ -217,9 +217,9 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
           <Q num={5} txt="Você já tentou divulgação paga antes? O que aconteceu?" hint="Experiência anterior (frustração = sua oportunidade)" id="r5" onChange={autoSave} />
           <Q num={6} txt="Você sabe qual canal traz o cliente que mais paga, ou trata todos igual?" hint="Sabe / não sabe" id="r6" onChange={autoSave} />
         </Card>
-        <Card label="Perguntas de implicação — as mais importantes">
+        <Card label="Perguntas de implicação: as mais importantes">
           <Q num={7} txt="Essa falta de previsibilidade... como afeta o seu caixa hoje?" hint="Conecta o problema a dinheiro real" id="r7" onChange={autoSave} />
-          <Q num={8} txt="Se nos próximos 3 meses continuar assim, qual é o impacto no seu negócio?" hint="Ele imagina o futuro negativo → urgência natural" id="r8" onChange={autoSave} />
+          <Q num={8} txt="Se nos próximos 3 meses continuar assim, qual é o impacto no seu negócio?" hint="Ele imagina o futuro negativo: urgência natural" id="r8" onChange={autoSave} />
           <Q num={9} txt="Se você tivesse 30% mais clientes por mês, o que mudaria pra você?" hint="Âncora o futuro positivo" id="r9" onChange={autoSave} />
           <Q num={10} txt="Um cliente novo vale quanto pra você? Qual é o ticket médio?" hint="Use para ancoragem de ROI depois" id="r10" onChange={autoSave} />
         </Card>
@@ -247,7 +247,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
         </Card>
         <Card label="Prova social">
           <Script label="Se tiver resultado recente" txt="A gente fez isso com [segmento similar]. Nos primeiros 60 dias, [resultado concreto]. Posso te mostrar o dashboard aqui na tela." />
-          <Script label="Se não tiver resultado recente" txt="Temos mais de 5 anos rodando campanhas, com mais de 25 negócios gerenciados. Estamos selecionando 3 parceiros pra garantir atenção total — e o resultado é garantia nossa." />
+          <Script label="Se não tiver resultado recente" txt="Temos mais de 5 anos rodando campanhas, com mais de 25 negócios gerenciados. Estamos selecionando 3 parceiros pra garantir atenção total e o resultado é garantia nossa." />
           <Tip txt="Mostre métricas reais na tela. Número na tela vale mais que qualquer fala." tipo="a" />
         </Card>
       </div>
@@ -274,9 +274,9 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
           ))}
         </div>
         <Card label="Scripts da ancoragem">
-          <Script label="Passo 1 — ancore alto (Completo)" txt="[Nome], o nosso formato mais completo é o Plano Completo — R$2.800 por mês." />
+          <Script label="Passo 1: ancore alto (Completo)" txt="[Nome], o nosso formato mais completo é o Plano Completo: R$2.800 por mês." />
           <Script label="Passo 2: Essencial como limitado" txt="O Plano Essencial fica em R$1.000, mas sem dashboard e sem reunião mensal. Você não tem visibilidade do que acontece com os leads depois que entram." />
-          <Script label="Passo 3 — Estratégico como a escolha óbvia" txt="O que a maioria escolhe é o Estratégico — R$1.500 por mês. Tráfego, CRM, dashboard em tempo real e reunião mensal. É o que eu recomendo pra quem quer crescer de forma organizada." />
+          <Script label="Passo 3: Estratégico como a escolha óbvia" txt="O que a maioria escolhe é o Estratégico: R$1.500 por mês. Tráfego, CRM, dashboard em tempo real e reunião mensal. É o que eu recomendo pra quem quer crescer de forma organizada." />
         </Card>
         <Card label="Ancoragem de ROI">
           <Script txt="Então se a gente trouxer apenas 3 clientes novos por mês, o seu investimento já se paga mais que duas vezes. O resto é lucro puro." />
@@ -293,14 +293,14 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
         <Tip txt="Objeção não é rejeição — é pedido de mais informação. Primeiro valide, depois redirecione." />
         {[
           { id:"obj1", title:'"Vou pensar e te dou um retorno"', content: <>
-            <Script txt="Claro, faz sentido. Mas antes de você ir pensar — o que especificamente você ainda precisa ver pra ter confiança pra decidir?" />
+            <Script txt="Claro, faz sentido. Mas antes de você ir pensar: o que especificamente você ainda precisa ver pra ter confiança pra decidir?" />
             <Script label="Se ele for vago:" txt="É uma questão de valor, de timing, ou tem alguma dúvida que eu não esclareci?" />
             <Tip txt="Force a objeção real aparecer. O 'vou pensar' esconde sempre: preço, confiança ou timing." tipo="a" />
             <Lbl txt="O que ele respondeu:" /><InputField id="obj1-nota" placeholder="Anote a objeção real..." onChange={autoSave} />
           </> },
           { id:"obj2", title:'"Está caro, tem agência mais barata"', content: <>
-            <Script label="Nunca compare preço — compare consequência:" txt="Concordo que tem mais baratas. A pergunta é: o que acontece quando você paga menos e o resultado não vem? Você fica sem clientes E sem o dinheiro investido." />
-            <Script label="Se ele insistir:" txt="Me diz — se a gente trouxesse [X] clientes novos por mês, qual seria o retorno em faturamento pra você?" />
+            <Script label="Nunca compare preço: compare consequência" txt="Concordo que tem mais baratas. A pergunta é: o que acontece quando você paga menos e o resultado não vem? Você fica sem clientes e sem o dinheiro investido." />
+            <Script label="Se ele insistir:" txt="Me diz: se a gente trouxesse [X] clientes novos por mês, qual seria o retorno em faturamento pra você?" />
             <Tip txt="Quando ele calcula o retorno em voz alta, o preço vira investimento. Deixa ele fazer a conta." />
             <Lbl txt="O que ele respondeu:" /><InputField id="obj2-nota" placeholder="Anote..." onChange={autoSave} />
           </> },
@@ -311,13 +311,13 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
             <Lbl txt="O histórico dele:" /><InputField id="obj3-nota" placeholder="Anote..." onChange={autoSave} />
           </> },
           { id:"obj4", title:'"Não tenho budget agora"', content: <>
-            <Script txt="O problema de budget não está ligado ao que você me descreveu — a falta de previsibilidade? Se a entrada de clientes fosse maior, o budget apareceria naturalmente, certo?" />
+            <Script txt="O problema de budget não está ligado ao que você me descreveu: a falta de previsibilidade? Se a entrada de clientes fosse maior, o budget apareceria naturalmente, certo?" />
             <Script label="Oferta com garantia:" txt="Começamos com o Plano Essencial. Se no primeiro mês você não ver resultado no dashboard, você não paga o segundo. Risco zero." />
             <Tip txt="Só ofereça garantia com confiança de entregar. Use como demonstração de segurança, não desespero." tipo="r" />
             <Lbl txt="O que ele respondeu:" /><InputField id="obj4-nota" placeholder="Anote..." onChange={autoSave} />
           </> },
           { id:"obj5", title:'"Preciso falar com minha esposa / sócio"', content: <>
-            <Script txt="Claro, faz todo sentido. Sugiro a gente agendar 20 minutos com vocês dois juntos — assim esclareço qualquer dúvida na hora e vocês decidem juntos. Quando você tem agenda essa semana?" />
+            <Script txt="Claro, faz todo sentido. Sugiro a gente agendar 20 minutos com vocês dois juntos: assim esclareço qualquer dúvida na hora e vocês decidem juntos. Quando você tem agenda essa semana?" />
             <Tip txt="Nunca deixe o material ir sem você. Peça a call com todos juntos." tipo="a" />
             <Lbl txt="Data/horário combinado:" /><InputField id="obj5-nota" placeholder="Anote quando ficou agendado..." onChange={autoSave} />
           </> },
@@ -333,11 +333,11 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
         <SH num="5" title="Fechamento" timer="35 a 45 min" />
         <Tip txt="Objetivo: obter uma decisão dentro da call. Nunca termine sem um 'sim' ou descobrir a objeção real." />
         <Tip txt="A maioria das vendas perdidas acontece porque o vendedor nunca pediu o fechamento." tipo="r" />
-        <Card label="Fala de fechamento — use exatamente assim">
-          <Script txt="[Nome], com base em tudo que você me contou — especialmente [DOR DELE] — o plano que faz sentido pra você é o Estratégico. Posso te enviar o contrato ainda hoje e a gente começa na semana que vem. Você prefere pagar via PIX ou cartão?" />
+        <Card label="Fala de fechamento: use exatamente assim">
+          <Script txt="[Nome], com base em tudo que você me contou: especialmente [DOR DELE]: o plano que faz sentido pra você é o Estratégico. Posso te enviar o contrato ainda hoje e a gente começa na semana que vem. Você prefere pagar via PIX ou cartão?" />
         </Card>
         <div style={{ background:"#0F6E56", borderRadius:10, padding:"18px 24px", textAlign:"center" as const, margin:"16px 0" }}>
-          <div style={{ color:"#fff", fontSize:15, fontWeight:600 }}>DEPOIS DE PEDIR O FECHAMENTO — FIQUE EM SILÊNCIO.</div>
+          <div style={{ color:"#fff", fontSize:15, fontWeight:600 }}>DEPOIS DE PEDIR O FECHAMENTO: FIQUE EM SILÊNCIO.</div>
           <div style={{ color:"rgba(255,255,255,0.7)", fontSize:12, marginTop:4 }}>Quem falar primeiro perde. Aguente o desconforto.</div>
         </div>
         <Card label="Se ele hesitar">
@@ -362,8 +362,8 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
           {[
             { dia:"DIA\n0", title:"Imediatamente após a call", txt:"Manda portfólio + áudio de 60s no WhatsApp explicando o próximo passo." },
             { dia:"DIA\n2", title:"Abertura de conversa", txt:'"[Nome], vi que você ainda não teve tempo de analisar. Posso te fazer uma pergunta rápida?"' },
-            { dia:"DIA\n5", title:"Prova social", txt:"Manda um print de métrica real sem contexto. Ele vai perguntar o que é — você reengaja." },
-            { dia:"DIA\n10", title:"Urgência real", txt:'"[Nome], vou fechar nossa última vaga do mês essa semana. Quero te dar prioridade."' },
+            { dia:"DIA\n5", title:"Prova social", txt:"Manda um print de métrica real sem contexto. Ele vai perguntar o que é: você reengaja." },
+            { dia:"DIA\n10", title:"Pergunta direta", txt:'"[Nome], o que está impedindo você de dar esse passo? Me fala com franqueza: quero entender se tem algo que eu não esclareci direito."' },
             { dia:"DIA\n20", title:"Nova abordagem", txt:'"[Nome], mudei uma coisa na nossa oferta que acho que faz mais sentido pra você."' },
             { dia:"DIA\n30", title:"Último contato", txt:'"[Nome], vou dar baixa no seu contato. Mudou alguma coisa no seu planejamento?"' },
           ].map(fu => (
@@ -407,11 +407,11 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
       <div id="abertura" style={{ marginBottom:48 }}>
         <SH num="1" title="Abertura" timer="0 a 5 min" />
         <Tip txt="Com iniciantes, o tom precisa ser mais de mentoria do que de diagnóstico. Eles precisam sentir que você é um parceiro, não um fornecedor." />
-        <Card label="Fala de abertura — tom de parceria">
-          <Script txt="[Nome], que bom falar com você. Quero antes de tudo entender onde você está hoje no seu negócio — cada fase tem uma estratégia diferente e quero ter certeza que vou indicar o caminho certo pra você. Posso te fazer algumas perguntas?" />
+        <Card label="Fala de abertura: tom de parceria">
+          <Script txt="[Nome], que bom falar com você. Quero antes de tudo entender onde você está hoje no seu negócio: cada fase tem uma estratégia diferente e quero ter certeza que vou indicar o caminho certo pra você. Posso te fazer algumas perguntas?" />
         </Card>
         <Card label="Se ele perguntar o preço logo de cara">
-          <Script txt="Vou te falar tudo sobre isso, mas primeiro preciso entender a fase que você está — porque o investimento certo depende de onde você quer chegar. Me conta um pouco mais sobre o seu negócio?" />
+          <Script txt="Vou te falar tudo sobre isso, mas primeiro preciso entender a fase que você está: porque o investimento certo depende de onde você quer chegar. Me conta um pouco mais sobre o seu negócio?" />
         </Card>
         <Tip txt="Iniciantes são mais inseguros com o processo de vendas. Seja mais acolhedor, menos interrogatório. Crie um ambiente onde ele se sinta à vontade para admitir que ainda está começando." tipo="a" />
       </div>
@@ -424,22 +424,22 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
         <Tip txt="Para iniciantes, a dor não é 'perder escala' — é 'ainda não saí do zero'. As perguntas precisam mapear onde ele está na jornada, não o que ele já construiu." />
         <Tip txt="Nunca deixe o iniciante se sentir pequeno. Valide a coragem de estar começando antes de qualquer pergunta." tipo="a" />
 
-        <Card label="Perguntas de situação — onde ele está na jornada">
-          <Q num={1} txt="Me conta como surgiu a ideia de abrir esse negócio — o que te motivou?" hint="Entenda o sonho e a motivação. Isso vai alimentar toda a ancoragem depois." id="r1" onChange={autoSave} />
+        <Card label="Perguntas de situação: onde ele está na jornada">
+          <Q num={1} txt="Me conta como surgiu a ideia de abrir esse negócio: o que te motivou?" hint="Entenda o sonho e a motivação. Isso vai alimentar toda a ancoragem depois." id="r1" onChange={autoSave} />
           <Q num={2} txt="Você já tem seus primeiros clientes pagantes ou ainda está na fase de estruturação?" hint="Determina se já há validação ou se é pré-receita" id="r2" onChange={autoSave} />
           <Q num={3} txt="Hoje como você está tentando atrair esses primeiros clientes?" hint="Mapeie: indicação, redes sociais, abordagem direta, nenhuma ação..." id="r3" onChange={autoSave} />
         </Card>
 
-        <Card label="Perguntas de problema — o que trava o crescimento">
+        <Card label="Perguntas de problema: o que trava o crescimento">
           <Q num={4} txt="Qual é a maior dificuldade que você enfrenta pra conseguir novos clientes agora?" hint="Deixa ele verbalizar. Não sugira respostas." id="r4" onChange={autoSave} />
           <Q num={5} txt="Quando você fala do seu serviço pra alguém, qual é a reação mais comum? As pessoas entendem o valor?" hint="Mapeia problema de comunicação e posicionamento" id="r5" onChange={autoSave} />
-          <Q num={6} txt="Você tem uma ideia de quem é o cliente ideal pra você — o perfil de pessoa que mais se beneficia do que você faz?" hint="Avalia maturidade de ICP — muito comum iniciantes não ter isso claro" id="r6" onChange={autoSave} />
+          <Q num={6} txt="Você tem uma ideia de quem é o cliente ideal pra você: o perfil de pessoa que mais se beneficia do que você faz?" hint="Avalia maturidade de ICP: muito comum iniciantes não ter isso claro" id="r6" onChange={autoSave} />
         </Card>
 
-        <Card label="Perguntas de implicação — conectar a urgência">
+        <Card label="Perguntas de implicação: conectar a urgência">
           <Q num={7} txt="Você tem uma meta de quantos clientes quer ter nos próximos 3 meses?" hint="Cria urgência com base no sonho, não na dor atual" id="r7" onChange={autoSave} />
           <Q num={8} txt="Se em 3 meses você continuar dependendo só de indicação, você acredita que vai chegar nessa meta?" hint="Ele mesmo percebe que o caminho atual não funciona" id="r8" onChange={autoSave} />
-          <Q num={9} txt="Quanto um cliente novo representa pra você em faturamento? Qual é o valor médio do seu serviço?" hint="Base para ancoragem de ROI — essencial para o iniciante enxergar o investimento como alavanca" id="r9" onChange={autoSave} />
+          <Q num={9} txt="Quanto um cliente novo representa pra você em faturamento? Qual é o valor médio do seu serviço?" hint="Base para ancoragem de ROI: essencial para o iniciante enxergar o investimento como alavanca" id="r9" onChange={autoSave} />
           <Q num={10} txt="Hoje você consegue se dedicar full-time a isso ou ainda concilia com outra atividade?" hint="Contexto importante: define urgência e disponibilidade de budget" id="r10" onChange={autoSave} />
         </Card>
 
@@ -457,12 +457,12 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
 
       {/* FASE 3 — APRESENTAÇÃO INICIANTE */}
       <div id="apresentacao" style={{ marginBottom:48 }}>
-        <SH num="3" title="Apresentação" timer="20 – 35 min" />
-        <Tip txt="Para iniciantes, o foco é mostrar que você vai CONSTRUIR junto com eles a base de clientes — não otimizar algo que já existe." />
-        <Tip txt="Conecte tudo ao sonho e à meta que ele declarou — não à dor de escala." tipo="a" />
+        <SH num="3" title="Apresentação" timer="20 a 35 min" />
+        <Tip txt="Para iniciantes, o foco é mostrar que você vai CONSTRUIR junto com eles a base de clientes: não otimizar algo que já existe." />
+        <Tip txt="Conecte tudo ao sonho e à meta que ele declarou: não à dor de escala." tipo="a" />
 
-        <Card label="Fala de transição — conecte ao sonho dele">
-          <Script txt="[Nome], com base no que você me contou — você quer [META DELE] nos próximos meses e hoje ainda depende de indicação pra isso. Deixa eu te mostrar como a gente acelera esse processo de forma previsível." />
+        <Card label="Fala de transição: conecte ao sonho dele">
+          <Script txt="[Nome], com base no que você me contou: você quer [META DELE] nos próximos meses e hoje ainda depende de indicação pra isso. Deixa eu te mostrar como a gente acelera esse processo de forma previsível." />
           <Lbl txt="Meta que você vai usar na transição:" />
           <InputField id="transicao-dor" placeholder="Ex: ter os primeiros 10 clientes do escritório em 60 dias..." onChange={autoSave} />
         </Card>
@@ -475,8 +475,8 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
         </Card>
 
         <Card label="Prova social adaptada para iniciantes">
-          <Script label="Profissional liberal em início similar" txt="A gente trabalhou com um [advogado/médico/prestador] que estava exatamente nessa fase — acabou de abrir o negócio. Em [X dias] ele já tinha [resultado]. Posso te mostrar o dashboard aqui na tela." />
-          <Script label="Se não tiver caso de iniciante" txt="Temos mais de 5 anos de experiência. Trabalhamos com negócios em fases diferentes — inclusive quem estava exatamente onde você está. O sistema que entregamos foi feito justamente pra essa fase de construção." />
+          <Script label="Profissional liberal em início similar" txt="A gente trabalhou com um [advogado/médico/prestador] que estava exatamente nessa fase: acabou de abrir o negócio. Em [X dias] ele já tinha [resultado]. Posso te mostrar o dashboard aqui na tela." />
+          <Script label="Se não tiver caso de iniciante" txt="Temos mais de 5 anos de experiência. Trabalhamos com negócios em fases diferentes: inclusive quem estava exatamente onde você está. O sistema que entregamos foi feito justamente pra essa fase de construção." />
         </Card>
       </div>
 
@@ -503,10 +503,10 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
           ))}
         </div>
 
-        <Card label="Scripts da ancoragem — adaptados para iniciantes">
-          <Script label="Passo 1 — ancore alto" txt="[Nome], o nosso formato mais completo é o Plano Completo — ideal pra quem quer máxima velocidade de crescimento — R$2.800 por mês." />
-          <Script label="Passo 2 — Essencial como limitado" txt="O Plano Essencial fica em R$1.000. Ele funciona, mas sem dashboard você não vai saber o que está funcionando — e pra quem está começando, esse dado é crucial pra não desperdiçar o investimento." />
-          <Script label="Passo 3: Estratégico como ideal para a fase dele" txt="Pra quem está na fase que você está, o que mais faz sentido é o Estratégico — R$1.500 por mês. Você tem tudo que precisa pra construir uma base sólida: tráfego, CRM pra não perder nenhum lead, dashboard pra ver o que funciona e reunião mensal pra ajustar a rota junto comigo." />
+        <Card label="Scripts da ancoragem: adaptados para iniciantes">
+          <Script label="Passo 1: ancore alto" txt="[Nome], o nosso formato mais completo é o Plano Completo: ideal pra quem quer máxima velocidade de crescimento: R$2.800 por mês." />
+          <Script label="Passo 2: Essencial como limitado" txt="O Plano Essencial fica em R$1.000. Ele funciona, mas sem dashboard você não vai saber o que está funcionando: e pra quem está começando, esse dado é crucial pra não desperdiçar o investimento." />
+          <Script label="Passo 3: Estratégico como ideal para a fase dele" txt="Pra quem está na fase que você está, o que mais faz sentido é o Estratégico: R$1.500 por mês. Você tem tudo que precisa pra construir uma base sólida: tráfego, CRM pra não perder nenhum lead, dashboard pra ver o que funciona e reunião mensal pra ajustar a rota junto comigo." />
         </Card>
 
         <Card label="Ancoragem de ROI — especial para iniciante">
@@ -564,11 +564,11 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
       <div id="fechamento" style={{ marginBottom:48 }}>
         <SH num="5" title="Fechamento" timer="35 a 45 min" />
         <Tip txt="Com iniciante, o fechamento precisa ser mais encorajador. Ele precisa sentir que está tomando a decisão certa, não que está sendo empurrado." />
-        <Card label="Fala de fechamento — adaptada para iniciante">
-          <Script txt="[Nome], você me disse que quer [META DELE] nos próximos meses. Com o caminho que você tem hoje — só indicação — isso vai ser muito mais difícil e demorado. O Estratégico resolve isso: você vai ter leads chegando de forma previsível, vai acompanhar tudo no dashboard e a gente vai ajustar junto todo mês. Posso enviar o contrato ainda hoje pra você começar essa semana?" />
+        <Card label="Fala de fechamento: adaptada para iniciante">
+          <Script txt="[Nome], você me disse que quer [META DELE] nos próximos meses. Com o caminho que você tem hoje: só indicação: isso vai ser muito mais difícil e demorado. O Estratégico resolve isso: você vai ter leads chegando de forma previsível, vai acompanhar tudo no dashboard e a gente vai ajustar junto todo mês. Posso enviar o contrato ainda hoje pra você começar essa semana?" />
         </Card>
         <div style={{ background:"#0F6E56", borderRadius:10, padding:"18px 24px", textAlign:"center" as const, margin:"16px 0" }}>
-          <div style={{ color:"#fff", fontSize:15, fontWeight:600 }}>DEPOIS DE PEDIR O FECHAMENTO — FIQUE EM SILÊNCIO.</div>
+          <div style={{ color:"#fff", fontSize:15, fontWeight:600 }}>DEPOIS DE PEDIR O FECHAMENTO: FIQUE EM SILÊNCIO.</div>
           <div style={{ color:"rgba(255,255,255,0.7)", fontSize:12, marginTop:4 }}>Quem falar primeiro perde. Aguente o desconforto.</div>
         </div>
         <Card label="Se ele hesitar">
@@ -588,13 +588,12 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
       {/* FOLLOW-UP INICIANTE */}
       <div id="followup" style={{ marginBottom:48 }}>
         <SH num="6" title="Follow-up Pós-Call" timer="Dias seguintes" />
-        <Tip txt="O iniciante precisa de um follow-up mais cuidadoso. Ele não some por desinteresse — some por insegurança. Seu papel é ser um ponto de segurança, não pressão." />
+        <Tip txt="O iniciante precisa de um follow-up mais cuidadoso. Ele não some por desinteresse: some por insegurança. Seu papel é ser um ponto de segurança, não pressão." />
         <Card label="Sequência de follow-up para iniciantes">
           {[
             { dia:"DIA\n0", title:"Imediatamente (máx. 30 min)", txt:"Manda um áudio de 60s reforçando que você entende a fase dele e que o sistema foi feito pra exatamente esse momento. Não mande só o PDF frio." },
             { dia:"DIA\n2", title:"Mensagem de suporte", txt:'"[Nome], fica à vontade pra me mandar qualquer dúvida que surgir enquanto você analisa. É uma decisão importante e quero que você se sinta seguro."' },
             { dia:"DIA\n5", title:"Conteúdo relevante", txt:"Manda um caso real (ou um artigo) de profissional da área dele que usou tráfego pago no início. Contexto de par funciona melhor que argumento de vendas." },
-            { dia:"DIA\n10", title:"Pergunta direta", txt:'"[Nome], o que está impedindo você de dar esse passo? Me fala com franqueza — quero entender se tem algo que eu não esclareci direito."' },
             { dia:"DIA\n20", title:"Nova condição", txt:'"[Nome], tenho uma proposta de entrada diferente que pode fazer mais sentido pra sua fase agora. Posso te apresentar em 10 minutos?"' },
             { dia:"DIA\n30", title:"Encerramento gentil", txt:'"[Nome], vou organizar minha agenda aqui. Se ainda fizer sentido conversar, estarei disponível. Torço muito pelo seu crescimento!"' },
           ].map(fu => (
@@ -623,7 +622,7 @@ type RoteiroProps = {
 
 function RoteiroLayout({ perfil, onVoltar, dbStatus, savedId, salvarNeon, exportarTxt, nav, children }: RoteiroProps & { perfil: Perfil; nav: {num:string;label:string;href:string}[]; children: React.ReactNode }) {
   const cor = perfil === "iniciante" ? "#7C3AED" : "#0F6E56";
-  const statusLabel = { idle:"Salvar no banco", saving:"Salvando...", saved:`✓ Salvo! ID #${savedId}`, error:"Erro — tente novamente" };
+  const statusLabel = { idle:"Salvar no banco", saving:"Salvando...", saved:`✓ Salvo! ID #${savedId}`, error:"Erro: tente novamente" };
   const statusColor = { idle:cor, saving:"#D4900A", saved:"#12C48B", error:"#B83232" };
 
   return (

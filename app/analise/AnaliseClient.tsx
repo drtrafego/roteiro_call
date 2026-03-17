@@ -142,7 +142,7 @@ export default function AnaliseClient({ calls }: { calls: Call[] }) {
                 {loading && (
                   <div style={{ textAlign: "center" as const, padding: "60px 0" }}>
                     <div style={{ fontSize: 40, marginBottom: 16, animation: "spin 2s linear infinite" }}>⚙️</div>
-                    <div style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", marginBottom: 8 }}>Claude está analisando a call...</div>
+                    <div style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", marginBottom: 8 }}>A IA está analisando a call...</div>
                     <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)" }}>Identificando perfil, objeções e próximos passos</div>
                     <style>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
                   </div>
