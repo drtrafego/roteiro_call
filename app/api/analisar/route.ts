@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
 Analise as respostas coletadas durante uma call de diagnóstico comercial e retorne uma análise estratégica completa.
 
 IMPORTANTE SOBRE A ESCRITA:
-- PROIBIDO: Não use travessões (—) ou hífens (-) como separadores de pensamento ou em listas. A IA costuma abusar dessa pontuação, e o cliente odeia.
+- PROIBIDO: Não use travessões ou hífens como separadores de pensamento ou em listas. A IA costuma abusar dessa pontuação, e o cliente odeia.
 - Use exclusivamente pontuação padrão: dois-pontos (:) para introduzir listas, pontos finais (.) para encerrar sentenças, vírgulas (,) para pausas e marcadores como "•" para listas se necessário.
 - O texto deve ser fluído, limpo e profissional.
 

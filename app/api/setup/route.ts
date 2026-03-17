@@ -11,27 +11,28 @@ export async function GET() {
         id            SERIAL PRIMARY KEY,
         criado_em     TIMESTAMPTZ DEFAULT NOW(),
 
-        -- Identificação
+        // 4. Inserir tabela: a ordem das colunas IMPORTA no Neon
         nome_cliente  TEXT,
         negocio       TEXT,
 
-        -- Diagnóstico — situação
+        -- Diagnóstico - situação
         r1_origem_clientes       TEXT,
         r2_previsibilidade       TEXT,
         r3_tempo_resposta        TEXT,
 
-        -- Diagnóstico — problema
+        -- Diagnóstico - problema
         r4_maior_desafio         TEXT,
         r5_experiencia_anterior  TEXT,
         r6_visibilidade_canais   TEXT,
 
-        -- Diagnóstico — implicação
+        -- Diagnóstico - implicação
         r7_impacto_caixa         TEXT,
         r8_impacto_futuro        TEXT,
         r9_o_que_mudaria         TEXT,
         r10_ticket_medio         TEXT,
 
         -- Resumo diagnóstico
+        // 6. Colunas de follow up
         nota_dor_principal       TEXT,
         nota_30_porcento         TEXT,
         nota_observacoes         TEXT,
@@ -59,6 +60,7 @@ export async function GET() {
         ia_temperatura            TEXT,   -- quente / morno / frio
         ia_objecao_principal      TEXT,
         ia_proximo_passo          TEXT,
+        // 5. Adicionar colunas caso não existam: o Neon é rígido
         ia_analise_completa       TEXT,
         ia_gerada_em              TIMESTAMPTZ
       )

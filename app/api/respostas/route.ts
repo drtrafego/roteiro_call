@@ -3,7 +3,7 @@ import { getSql } from '@/lib/db'
 
 export const dynamic = 'force-dynamic'
 
-// GET — lista todas as respostas (mais recentes primeiro)
+// GET: Listar respostas
 export async function GET() {
   try {
     const sql = getSql();
@@ -22,7 +22,7 @@ export async function GET() {
   }
 }
 
-// POST — salva uma resposta de call
+// POST: Salvar resposta
 export async function POST(req: NextRequest) {
   try {
     const b = await req.json()

@@ -175,11 +175,11 @@ export default function Respostas() {
                 {filtradas.map(r => (
                   <tr key={r.id} onClick={() => setSelecionada(r)}>
                     <td><span className="badge">#{r.id}</span></td>
-                    <td style={{fontWeight:500}}>{r.nome_cliente || <span style={{color:'#C8C6C0'}}>—</span>}</td>
-                    <td style={{color:'#5A5A54'}}>{r.negocio || <span style={{color:'#C8C6C0'}}>—</span>}</td>
-                    <td style={{color:'#5A5A54',maxWidth:200,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{r.r4_maior_desafio || r.nota_dor_principal || <span style={{color:'#C8C6C0'}}>—</span>}</td>
-                    <td>{r.fech_plano ? <span className="badge">{r.fech_plano}</span> : <span style={{color:'#C8C6C0'}}>—</span>}</td>
-                    <td><span style={{display:'flex',alignItems:'center',gap:6}}><span style={{width:7,height:7,borderRadius:'50%',background:statusColor(r.fech_resultado),flexShrink:0,display:'inline-block'}}></span>{r.fech_resultado ? r.fech_resultado.slice(0,40)+(r.fech_resultado.length>40?'...':'') : <span style={{color:'#C8C6C0'}}>—</span>}</span></td>
+                    <td style={{fontWeight:500}}>{r.nome_cliente || <span style={{color:'#C8C6C0'}}></span>}</td>
+                    <td style={{color:'#5A5A54'}}>{r.negocio || <span style={{color:'#C8C6C0'}}></span>}</td>
+                    <td style={{color:'#5A5A54',maxWidth:200,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{r.r4_maior_desafio || r.nota_dor_principal || <span style={{color:'#C8C6C0'}}></span>}</td>
+                    <td>{r.fech_plano ? <span className="badge">{r.fech_plano}</span> : <span style={{color:'#C8C6C0'}}></span>}</td>
+                    <td><span style={{display:'flex',alignItems:'center',gap:6}}><span style={{width:7,height:7,borderRadius:'50%',background:statusColor(r.fech_resultado),flexShrink:0,display:'inline-block'}}></span>{r.fech_resultado ? r.fech_resultado.slice(0,40)+(r.fech_resultado.length>40?'...':'') : <span style={{color:'#C8C6C0'}}></span>}</span></td>
                     <td style={{color:'#9A9A92',whiteSpace:'nowrap'}}>{dataFmt(r.criado_em)}</td>
                   </tr>
                 ))}
@@ -203,17 +203,17 @@ export default function Respostas() {
             </div>
             <div className="drawer-body">
               {[
-                { titulo: 'Diagnóstico — Situação', campos: [
+                { titulo: 'Diagnóstico: Situação', campos: [
                   ['Origem dos clientes', selecionada.r1_origem_clientes],
                   ['Previsibilidade', selecionada.r2_previsibilidade],
                   ['Tempo de resposta', selecionada.r3_tempo_resposta],
                 ]},
-                { titulo: 'Diagnóstico — Problema', campos: [
+                { titulo: 'Diagnóstico: Problema', campos: [
                   ['Maior desafio', selecionada.r4_maior_desafio],
                   ['Experiência anterior', selecionada.r5_experiencia_anterior],
                   ['Visibilidade de canais', selecionada.r6_visibilidade_canais],
                 ]},
-                { titulo: 'Diagnóstico — Implicação', campos: [
+                { titulo: 'Diagnóstico: Implicação', campos: [
                   ['Impacto no caixa', selecionada.r7_impacto_caixa],
                   ['Impacto futuro', selecionada.r8_impacto_futuro],
                   ['O que mudaria', selecionada.r9_o_que_mudaria],

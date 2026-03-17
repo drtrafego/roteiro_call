@@ -4,7 +4,7 @@ import { stackServerApp } from "@/lib/stack";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Roteiro de Call — DR.Tráfego",
+  title: "Roteiro de Call: DR.Tráfego",
   description: "Sistema de diagnóstico e análise de calls comerciais",
 };
 
