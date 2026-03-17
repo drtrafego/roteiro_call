@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { sql } from '@/lib/db'
 
+export const dynamic = 'force-dynamic'
+
 // GET — lista todas as respostas (mais recentes primeiro)
 export async function GET() {
   try {
