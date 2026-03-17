@@ -1,6 +1,6 @@
 import { StackHandler } from "@stackframe/stack";
 import { stackServerApp } from "@/lib/stack";
 
-export default function Handler(props: unknown) {
-  return <StackHandler app={stackServerApp} {...(props as object)} />;
+export default function Handler(props: { params: { stack: string[] }; searchParams: Record<string, string> }) {
+  return <StackHandler app={stackServerApp} fullPage {...props} />;
 }
