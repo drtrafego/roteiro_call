@@ -1,4 +1,4 @@
-import { StackHandler } from "@stackauth/nextjs";
+import { StackHandler } from "@stackframe/stack";
 import { stackServerApp } from "@/lib/stack";
 
 export default function Handler(props: unknown) {
