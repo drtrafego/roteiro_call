@@ -13,7 +13,7 @@
     "react-dom": "^19.0.0",
     "@neondatabase/serverless": "^0.10.4",
     "@google/generative-ai": "^0.21.0",
-    "@stackauth/nextjs": "^2.7.13"
+    "@stackframe/stack": "^2.7.13"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

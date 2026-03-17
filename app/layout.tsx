@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { StackProvider, StackTheme } from "@stackauth/nextjs";
+import { StackProvider, StackTheme } from "@stackframe/stack";
 import { stackServerApp } from "@/lib/stack";
 import "./globals.css";
 
