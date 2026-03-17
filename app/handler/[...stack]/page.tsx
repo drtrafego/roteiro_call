@@ -1,6 +1,7 @@
 import { StackHandler } from "@stackframe/stack";
 import { stackServerApp } from "@/lib/stack";
 
-export default function Handler(props: { params: { stack: string[] }; searchParams: Record<string, string> }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Handler(props: any) {
   return <StackHandler app={stackServerApp} fullPage {...props} />;
 }
