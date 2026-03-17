@@ -108,7 +108,7 @@ export default function AnaliseClient({ calls }: { calls: Call[] }) {
                       </span>
                     )}
                   </div>
-                  <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 4 }}>{call.negocio || "—"}</div>
+                  <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 4 }}>{call.negocio || "Não informado"}</div>
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.25)", fontFamily: "'DM Mono',monospace" }}>
                     {new Date(call.criado_em).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" })}
                   </div>
@@ -218,7 +218,7 @@ export default function AnaliseClient({ calls }: { calls: Call[] }) {
 
                     {/* SCRIPT DE FOLLOW-UP */}
                     <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 14, padding: 24, marginBottom: 16 }}>
-                      <div style={{ fontFamily: "'DM Mono',monospace", fontSize: 9, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" as const, marginBottom: 10 }}>📱 Script de follow-up — mande nas próximas 24h</div>
+                      <div style={{ fontFamily: "'DM Mono',monospace", fontSize: 9, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" as const, marginBottom: 10 }}>📱 Script de follow-up: mande nas próximas 24h</div>
                       <div style={{ background: "rgba(0,0,0,0.3)", borderRadius: 10, padding: "16px 20px", fontSize: 14, color: "#F7F6F2", lineHeight: 1.7, fontStyle: "italic" }}>"{analise.script_followup}"</div>
                       <button onClick={() => navigator.clipboard.writeText(analise.script_followup)} style={{ marginTop: 10, padding: "6px 14px", background: "transparent", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, color: "rgba(255,255,255,0.5)", fontSize: 11, cursor: "pointer", fontFamily: "inherit" }}>📋 Copiar mensagem</button>
                     </div>

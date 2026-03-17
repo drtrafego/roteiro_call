@@ -23,9 +23,9 @@ export async function POST(req: NextRequest) {
 Analise as respostas coletadas durante uma call de diagnóstico comercial e retorne uma análise estratégica completa.
 
 IMPORTANTE SOBRE A ESCRITA:
-- NÃO use travessões (-) ou hífens no meio de textos ou para separar frases.
-- Use pontuação padrão da língua portuguesa: pontos finais, vírgulas e pontos-e-vírgulas.
-- O texto deve ser fluído e profissional, sem poluição visual.
+- PROIBIDO: Não use travessões (—) ou hífens (-) como separadores de pensamento ou em listas. A IA costuma abusar dessa pontuação, e o cliente odeia.
+- Use exclusivamente pontuação padrão: dois-pontos (:) para introduzir listas, pontos finais (.) para encerrar sentenças, vírgulas (,) para pausas e marcadores como "•" para listas se necessário.
+- O texto deve ser fluído, limpo e profissional.
 
 
 DADOS DA CALL:
@@ -33,26 +33,26 @@ Cliente: ${call.nome_cliente || "Não informado"}
 Negócio/Segmento: ${call.negocio || "Não informado"}
 Data: ${new Date(call.criado_em as string).toLocaleDateString("pt-BR")}
 
-DIAGNÓSTICO — SITUAÇÃO:
-1. Origem atual dos clientes: ${call.r1_origem_clientes || "-"}
-2. Previsibilidade mensal: ${call.r2_previsibilidade || "-"}
-3. Tempo de resposta a leads: ${call.r3_tempo_resposta || "-"}
+DIAGNÓSTICO: SITUAÇÃO:
+1. Origem atual dos clientes: ${call.r1_origem_clientes || "Não informado"}
+2. Previsibilidade mensal: ${call.r2_previsibilidade || "Não informado"}
+3. Tempo de resposta a leads: ${call.r3_tempo_resposta || "Não informado"}
 
-DIAGNÓSTICO — PROBLEMA:
-4. Maior desafio de crescimento: ${call.r4_maior_desafio || "-"}
-5. Experiência anterior com tráfego: ${call.r5_experiencia_anterior || "-"}
-6. Visibilidade de canais: ${call.r6_visibilidade_canais || "-"}
+DIAGNÓSTICO: PROBLEMA:
+4. Maior desafio de crescimento: ${call.r4_maior_desafio || "Não informado"}
+5. Experiência anterior com tráfego: ${call.r5_experiencia_anterior || "Não informado"}
+6. Visibilidade de canais: ${call.r6_visibilidade_canais || "Não informado"}
 
-DIAGNÓSTICO — IMPLICAÇÃO:
-7. Impacto no caixa: ${call.r7_impacto_caixa || "-"}
-8. Impacto futuro se continuar assim: ${call.r8_impacto_futuro || "-"}
-9. O que mudaria com 30% mais clientes: ${call.r9_o_que_mudaria || "-"}
-10. Ticket médio por cliente: ${call.r10_ticket_medio || "-"}
+DIAGNÓSTICO: IMPLICAÇÃO:
+7. Impacto no caixa: ${call.r7_impacto_caixa || "Não informado"}
+8. Impacto futuro se continuar assim: ${call.r8_impacto_futuro || "Não informado"}
+9. O que mudaria com 30% mais clientes: ${call.r9_o_que_mudaria || "Não informado"}
+10. Ticket médio por cliente: ${call.r10_ticket_medio || "Não informado"}
 
 RESUMO DO DIAGNÓSTICO:
-Dor principal: ${call.nota_dor_principal || "-"}
-Motivação de crescimento: ${call.nota_30_clientes || "-"}
-Observações gerais: ${call.nota_observacoes || "-"}
+Dor principal: ${call.nota_dor_principal || "Não informado"}
+Motivação de crescimento: ${call.nota_30_clientes || "Não informado"}
+Observações gerais: ${call.nota_observacoes || "Não informado"}
 
 OBJEÇÕES LEVANTADAS:
 "Vou pensar": ${call.obj_vou_pensar || "Não levantada"}
@@ -62,10 +62,10 @@ OBJEÇÕES LEVANTADAS:
 "Falar com sócio/esposa": ${call.obj_falar_socio || "Não levantada"}
 
 FECHAMENTO:
-Plano apresentado: ${call.fech_plano || "-"}
-Objeção final: ${call.fech_objecao_final || "-"}
-Próximo passo combinado: ${call.fech_proximo_passo || "-"}
-Resultado da call: ${call.fech_resultado || "-"}
+Plano apresentado: ${call.fech_plano || "Não informado"}
+Objeção final: ${call.fech_objecao_final || "Não informado"}
+Próximo passo combinado: ${call.fech_proximo_passo || "Não informado"}
+Resultado da call: ${call.fech_resultado || "Não informado"}
 
 ---
 

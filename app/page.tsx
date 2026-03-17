@@ -188,7 +188,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
 
       {/* FASE 1 */}
       <div id="abertura" style={{ marginBottom:48 }}>
-        <SH num="1" title="Abertura" timer="0 – 5 min" />
+        <SH num="1" title="Abertura" timer="0 a 5 min" />
         <Tip txt="Objetivo: criar sintonia e assumir o controle. Quem faz pergunta, lidera a conversa." />
         <Card label="Fala de abertura">
           <Script txt="[Nome], que bom falar com você. Antes de mostrar qualquer coisa, quero entender o seu negócio primeiro. Posso te fazer algumas perguntas?" />
@@ -204,7 +204,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
 
       {/* FASE 2 */}
       <div id="diagnostico" style={{ marginBottom:48 }}>
-        <SH num="2" title="Diagnóstico — Cavar a Dor" timer="5 – 20 min" />
+        <SH num="2" title="Diagnóstico: Cavar a Dor" timer="5 a 20 min" />
         <Tip txt="Objetivo: fazer o lead verbalizar os próprios problemas. Você não convence — ele se convence." />
         <Tip txt="NUNCA interrompa. Quanto mais ele fala, mais munição você tem." tipo="r" />
         <Card label="Perguntas de situação">
@@ -256,11 +256,11 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
 
       {/* ANCORAGEM */}
       <div id="ancoragem" style={{ marginBottom:48 }}>
-        <SH num="3B" title="Ancoragem de Preço" timer="Dentro da apresentação" />
+        <SH num="3B" title="Ancoragem de Preço" timer="Apresentação" />
         <Tip txt="Apresente SEMPRE nesta ordem: Completo → Essencial → Estratégico. Nunca comece pelo mais barato." />
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:12, margin:"16px 0" }}>
           {[
-            { nome:"Essencial", valor:"R$1.000", itens:["✓ Tráfego pago","✓ CRM de leads","— Dashboard","— Reunião mensal"], destaque:false },
+            { nome:"Essencial", valor:"R$1.000", itens:["✓ Tráfego pago","✓ CRM de leads","• Dashboard","• Reunião mensal"], destaque:false },
             { nome:"Estratégico ★", valor:"R$1.500", itens:["✓ Tráfego pago","✓ CRM de leads","✓ Dashboard","✓ Reunião mensal"], destaque:true },
             { nome:"Completo", valor:"R$2.800", itens:["✓ Tráfego pago","✓ CRM de leads","✓ Dashboard","✓ Reunião mensal","✓ 2 canais + relatório"], destaque:false },
           ].map(p => (
@@ -275,7 +275,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
         </div>
         <Card label="Scripts da ancoragem">
           <Script label="Passo 1 — ancore alto (Completo)" txt="[Nome], o nosso formato mais completo é o Plano Completo — R$2.800 por mês." />
-          <Script label="Passo 2 — Essencial como limitado" txt="O Plano Essencial fica em R$1.000, mas sem dashboard e sem reunião mensal. Você não tem visibilidade do que acontece com os leads depois que entram." />
+          <Script label="Passo 2: Essencial como limitado" txt="O Plano Essencial fica em R$1.000, mas sem dashboard e sem reunião mensal. Você não tem visibilidade do que acontece com os leads depois que entram." />
           <Script label="Passo 3 — Estratégico como a escolha óbvia" txt="O que a maioria escolhe é o Estratégico — R$1.500 por mês. Tráfego, CRM, dashboard em tempo real e reunião mensal. É o que eu recomendo pra quem quer crescer de forma organizada." />
         </Card>
         <Card label="Ancoragem de ROI">
@@ -289,7 +289,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
 
       {/* OBJEÇÕES */}
       <div id="objecoes" style={{ marginBottom:48 }}>
-        <SH num="4" title="Objeções — Scripts de Resposta" timer="Durante toda a call" />
+        <SH num="4" title="Objeções: Scripts de Resposta" timer="Call" />
         <Tip txt="Objeção não é rejeição — é pedido de mais informação. Primeiro valide, depois redirecione." />
         {[
           { id:"obj1", title:'"Vou pensar e te dou um retorno"', content: <>
@@ -330,7 +330,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
 
       {/* FECHAMENTO */}
       <div id="fechamento" style={{ marginBottom:48 }}>
-        <SH num="5" title="Fechamento" timer="35 – 45 min" />
+        <SH num="5" title="Fechamento" timer="35 a 45 min" />
         <Tip txt="Objetivo: obter uma decisão dentro da call. Nunca termine sem um 'sim' ou descobrir a objeção real." />
         <Tip txt="A maioria das vendas perdidas acontece porque o vendedor nunca pediu o fechamento." tipo="r" />
         <Card label="Fala de fechamento — use exatamente assim">
@@ -405,7 +405,7 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
 
       {/* FASE 1 */}
       <div id="abertura" style={{ marginBottom:48 }}>
-        <SH num="1" title="Abertura" timer="0 – 5 min" />
+        <SH num="1" title="Abertura" timer="0 a 5 min" />
         <Tip txt="Com iniciantes, o tom precisa ser mais de mentoria do que de diagnóstico. Eles precisam sentir que você é um parceiro, não um fornecedor." />
         <Card label="Fala de abertura — tom de parceria">
           <Script txt="[Nome], que bom falar com você. Quero antes de tudo entender onde você está hoje no seu negócio — cada fase tem uma estratégia diferente e quero ter certeza que vou indicar o caminho certo pra você. Posso te fazer algumas perguntas?" />
@@ -420,7 +420,7 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
 
       {/* FASE 2 — DIAGNÓSTICO INICIANTE */}
       <div id="diagnostico" style={{ marginBottom:48 }}>
-        <SH num="2" title="Diagnóstico — Entender o Momento" timer="5 – 20 min" />
+        <SH num="2" title="Diagnóstico: Entender o Momento" timer="5 a 20 min" />
         <Tip txt="Para iniciantes, a dor não é 'perder escala' — é 'ainda não saí do zero'. As perguntas precisam mapear onde ele está na jornada, não o que ele já construiu." />
         <Tip txt="Nunca deixe o iniciante se sentir pequeno. Valide a coragem de estar começando antes de qualquer pergunta." tipo="a" />
 
@@ -484,12 +484,12 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
 
       {/* ANCORAGEM INICIANTE */}
       <div id="ancoragem" style={{ marginBottom:48 }}>
-        <SH num="3B" title="Ancoragem de Preço" timer="Dentro da apresentação" />
+        <SH num="3B" title="Ancoragem de Preço" timer="Apresentação" />
         <Tip txt="Para o iniciante o preço precisa ser justificado pelo ROI de forma ainda mais clara. Ele tem menos certeza do budget e mais medo de errar o investimento." />
 
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:12, margin:"16px 0" }}>
           {[
-            { nome:"Essencial", valor:"R$1.000", itens:["✓ Tráfego pago","✓ CRM de leads","— Dashboard","— Reunião mensal"], destaque:false },
+            { nome:"Essencial", valor:"R$1.000", itens:["✓ Tráfego pago","✓ CRM de leads","• Dashboard","• Reunião mensal"], destaque:false },
             { nome:"Estratégico ★", valor:"R$1.500", itens:["✓ Tráfego pago","✓ CRM de leads","✓ Dashboard","✓ Reunião mensal"], destaque:true },
             { nome:"Completo", valor:"R$2.800", itens:["✓ Tráfego pago","✓ CRM de leads","✓ Dashboard","✓ Reunião mensal","✓ 2 canais + relatório"], destaque:false },
           ].map(p => (
@@ -506,7 +506,7 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
         <Card label="Scripts da ancoragem — adaptados para iniciantes">
           <Script label="Passo 1 — ancore alto" txt="[Nome], o nosso formato mais completo é o Plano Completo — ideal pra quem quer máxima velocidade de crescimento — R$2.800 por mês." />
           <Script label="Passo 2 — Essencial como limitado" txt="O Plano Essencial fica em R$1.000. Ele funciona, mas sem dashboard você não vai saber o que está funcionando — e pra quem está começando, esse dado é crucial pra não desperdiçar o investimento." />
-          <Script label="Passo 3 — Estratégico como ideal para a fase dele" txt="Pra quem está na fase que você está, o que mais faz sentido é o Estratégico — R$1.500 por mês. Você tem tudo que precisa pra construir uma base sólida: tráfego, CRM pra não perder nenhum lead, dashboard pra ver o que funciona e reunião mensal pra ajustar a rota junto comigo." />
+          <Script label="Passo 3: Estratégico como ideal para a fase dele" txt="Pra quem está na fase que você está, o que mais faz sentido é o Estratégico — R$1.500 por mês. Você tem tudo que precisa pra construir uma base sólida: tráfego, CRM pra não perder nenhum lead, dashboard pra ver o que funciona e reunião mensal pra ajustar a rota junto comigo." />
         </Card>
 
         <Card label="Ancoragem de ROI — especial para iniciante">
@@ -521,7 +521,7 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
 
       {/* OBJEÇÕES INICIANTE */}
       <div id="objecoes" style={{ marginBottom:48 }}>
-        <SH num="4" title="Objeções — Scripts de Resposta" timer="Durante toda a call" />
+        <SH num="4" title="Objeções: Scripts de Resposta" timer="Call" />
         <Tip txt="Iniciantes têm objeções mais emocionais do que racionais. O medo de errar o investimento é maior do que a análise de preço." />
         {[
           { id:"obj1", title:'"Vou pensar, ainda estou começando"', content: <>
@@ -562,7 +562,7 @@ function RoteiroIniciante({ onVoltar, dbStatus, savedId, salvarNeon, exportarTxt
 
       {/* FECHAMENTO INICIANTE */}
       <div id="fechamento" style={{ marginBottom:48 }}>
-        <SH num="5" title="Fechamento" timer="35 – 45 min" />
+        <SH num="5" title="Fechamento" timer="35 a 45 min" />
         <Tip txt="Com iniciante, o fechamento precisa ser mais encorajador. Ele precisa sentir que está tomando a decisão certa, não que está sendo empurrado." />
         <Card label="Fala de fechamento — adaptada para iniciante">
           <Script txt="[Nome], você me disse que quer [META DELE] nos próximos meses. Com o caminho que você tem hoje — só indicação — isso vai ser muito mais difícil e demorado. O Estratégico resolve isso: você vai ter leads chegando de forma previsível, vai acompanhar tudo no dashboard e a gente vai ajustar junto todo mês. Posso enviar o contrato ainda hoje pra você começar essa semana?" />
@@ -633,7 +633,7 @@ function RoteiroLayout({ perfil, onVoltar, dbStatus, savedId, salvarNeon, export
         {/* SIDEBAR */}
         <nav style={{ width:220, minHeight:"100vh", background:"#1A1A18", position:"fixed", top:0, left:0, display:"flex", flexDirection:"column", padding:"28px 0", zIndex:100 }}>
           <div style={{ padding:"0 20px 16px", borderBottom:"1px solid rgba(255,255,255,0.1)", marginBottom:16 }}>
-            <button onClick={onVoltar} style={{ background:"transparent", border:"none", color:"rgba(255,255,255,0.3)", fontSize:11, cursor:"pointer", fontFamily:"'DM Mono',monospace", letterSpacing:"0.06em", padding:0, marginBottom:10, display:"flex", alignItems:"center", gap:4 }}>← trocar perfil</button>
+            <button onClick={onVoltar} style={{ background:"transparent", border:"none", color:"rgba(255,255,255,0.3)", fontSize:11, cursor:"pointer", fontFamily:"'DM Mono',monospace", letterSpacing:"0.06em", padding:0, marginBottom:10, display:"flex", alignItems:"center", gap:4 }}>← Trocar perfil</button>
             <div style={{ fontFamily:"'DM Mono',monospace", fontSize:10, color:cor, letterSpacing:"0.12em", textTransform:"uppercase" as const, marginBottom:4 }}>{perfil === "iniciante" ? "🚀 Iniciante" : "🏢 Estabelecido"}</div>
             <div style={{ fontSize:13, fontWeight:500, color:"#fff" }}>Roteiro de Call</div>
           </div>
@@ -748,7 +748,7 @@ export default function RoteiroCall() {
   function exportarTxt() {
     const nome = getVal("nome-cliente") || "cliente";
     const data = new Date().toLocaleDateString("pt-BR");
-    let txt = `ROTEIRO DE CALL — DR.TRÁFEGO\nPerfil: ${perfil}\nData: ${data} | Cliente: ${nome}\n${"=".repeat(50)}\n\n`;
+    let txt = `ROTEIRO DE CALL: DR.TRÁFEGO\nPerfil: ${perfil}\nData: ${data} | Cliente: ${nome}\n${"=".repeat(50)}\n\n`;
     [["DIAGNÓSTICO",[["R1","r1"],["R2","r2"],["R3","r3"],["R4","r4"],["R5","r5"],["R6","r6"],["R7","r7"],["R8","r8"],["R9","r9"],["R10","r10"],["Dor","nota-dor"],["Meta","nota-30"],["Obs","nota-obs"]]],
      ["APRESENTAÇÃO",[["Transição","transicao-dor"],["ROI","calculo-roi"]]],
      ["OBJEÇÕES",[["Obj1","obj1-nota"],["Obj2","obj2-nota"],["Obj3","obj3-nota"],["Obj4","obj4-nota"],["Obj5","obj5-nota"]]],
