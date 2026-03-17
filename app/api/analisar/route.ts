@@ -22,6 +22,12 @@ export async function POST(req: NextRequest) {
 
 Analise as respostas coletadas durante uma call de diagnóstico comercial e retorne uma análise estratégica completa.
 
+IMPORTANTE SOBRE A ESCRITA:
+- NÃO use travessões (-) ou hífens no meio de textos ou para separar frases.
+- Use pontuação padrão da língua portuguesa: pontos finais, vírgulas e pontos-e-vírgulas.
+- O texto deve ser fluído e profissional, sem poluição visual.
+
+
 DADOS DA CALL:
 Cliente: ${call.nome_cliente || "Não informado"}
 Negócio/Segmento: ${call.negocio || "Não informado"}
