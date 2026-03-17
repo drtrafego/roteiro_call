@@ -1,7 +1,10 @@
-import { stackServerApp } from "@/lib/stack";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-export const middleware = stackServerApp.middleware;
+export function middleware(_request: NextRequest) {
+  return NextResponse.next();
+}
 
 export const config = {
-  matcher: ["/handler/:path*", "/analise/:path*"],
+  matcher: ["/handler/:path*"],
 };
