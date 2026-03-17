@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sql } from "@/lib/db";
+import { getSql } from "@/lib/db";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const dynamic = "force-dynamic";
@@ -12,7 +12,8 @@ export async function POST(req: NextRequest) {
     const { id } = await req.json();
     if (!id) return NextResponse.json({ ok: false, erro: "ID obrigatório" }, { status: 400 });
 
-    const rows = await sql`SELECT * FROM respostas_call WHERE id = ${id}`;
+    const sql = getSql();
+    const rows = (await sql`SELECT * FROM respostas_call WHERE id = ${id}`) as Record<string, unknown>[];
     if (!rows.length) return NextResponse.json({ ok: false, erro: "Call não encontrada" }, { status: 404 });
 
     const call = rows[0];
@@ -24,7 +25,7 @@ Analise as respostas coletadas durante uma call de diagnóstico comercial e reto
 DADOS DA CALL:
 Cliente: ${call.nome_cliente || "Não informado"}
 Negócio/Segmento: ${call.negocio || "Não informado"}
-Data: ${new Date(call.criado_em).toLocaleDateString("pt-BR")}
+Data: ${new Date(call.criado_em as string).toLocaleDateString("pt-BR")}
 
 DIAGNÓSTICO — SITUAÇÃO:
 1. Origem atual dos clientes: ${call.r1_origem_clientes || "-"}

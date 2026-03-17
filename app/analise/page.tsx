@@ -1,6 +1,6 @@
 import { stackServerApp } from "@/lib/stack";
 import { redirect } from "next/navigation";
-import { sql, criarTabela } from "@/lib/db";
+import { getSql, criarTabela } from "@/lib/db";
 import AnaliseClient from "./AnaliseClient";
 
 export default async function AnalisePage() {
@@ -8,7 +8,8 @@ export default async function AnalisePage() {
   if (!user) redirect("/handler/sign-in");
 
   await criarTabela();
-  const calls = await sql`
+  const sql = getSql();
+  const calls = (await sql`
     SELECT id, criado_em, nome_cliente, negocio,
            fech_resultado, ia_temperatura, ia_perfil_lead,
            ia_proximo_passo, ia_gerada_em,
@@ -16,7 +17,7 @@ export default async function AnalisePage() {
     FROM respostas_call
     ORDER BY criado_em DESC
     LIMIT 50
-  `;
+  `) as Record<string, unknown>[];
 
   return <AnaliseClient calls={JSON.parse(JSON.stringify(calls))} />;
 }

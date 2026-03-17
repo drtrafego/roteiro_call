@@ -1,20 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { sql } from '@/lib/db'
+import { getSql } from '@/lib/db'
 
 export const dynamic = 'force-dynamic'
 
 // GET — lista todas as respostas (mais recentes primeiro)
 export async function GET() {
   try {
-    const rows = await sql`
+    const sql = getSql();
+    const rows = (await sql`
       SELECT * FROM respostas_call
       ORDER BY criado_em DESC
       LIMIT 200
-    `
+    `) as Record<string, unknown>[];
     return NextResponse.json({ ok: true, data: rows })
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err)
-    // Tabela pode não existir ainda
     if (msg.includes('does not exist')) {
       return NextResponse.json({ ok: true, data: [], aviso: 'Tabela ainda não criada. Acesse /api/setup primeiro.' })
     }
@@ -26,8 +26,9 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const b = await req.json()
+    const sql = getSql();
 
-    const [row] = await sql`
+    const rows = (await sql`
       INSERT INTO respostas_call (
         nome_cliente, negocio,
         r1_origem_clientes, r2_previsibilidade, r3_tempo_resposta,
@@ -48,8 +49,9 @@ export async function POST(req: NextRequest) {
         ${b.fech_plano          ?? null}, ${b.fech_objecao_final    ?? null}, ${b.fech_proximo_passo     ?? null}, ${b.fech_resultado ?? null}
       )
       RETURNING id, criado_em
-    `
+    `) as Record<string, unknown>[];
 
+    const row = rows[0];
     return NextResponse.json({ ok: true, id: row.id, criado_em: row.criado_em })
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err)

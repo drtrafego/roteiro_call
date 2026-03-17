@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sql, criarTabela } from "@/lib/db";
+import { getSql, criarTabela } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+    const sql = getSql();
     await criarTabela();
 
     const result = await sql`
