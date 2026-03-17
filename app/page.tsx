@@ -205,7 +205,7 @@ function RoteiroEstabelecido({ onVoltar, dbStatus, savedId, salvarNeon, exportar
       {/* FASE 2 */}
       <div id="diagnostico" style={{ marginBottom: 48 }}>
         <SH num="2" title="Diagnóstico: Cavar a Dor" timer="5 a 20 min" />
-        <Tip txt="Objetivo: fazer o lead verbalizar os próprios problemas. Voc\u00ea n\u00e3o convence: ele se convence." />
+        <Tip txt="Objetivo: fazer o lead verbalizar os próprios problemas. Você não convence: ele se convence." />
         <Tip txt="NUNCA interrompa. Quanto mais ele fala, mais munição você tem." tipo="r" />
         <Card label="Perguntas de situação">
           <Q num={1} txt="Hoje, de onde vêm a maioria dos seus clientes?" hint="Canal principal atual" id="r1" onChange={autoSave} />
